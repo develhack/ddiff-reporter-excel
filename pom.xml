@@ -5,7 +5,7 @@
   <groupId>com.develhack</groupId>
   <artifactId>ddiff-reporter-excel</artifactId>
   <packaging>jar</packaging>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <name>ddiff-reporter-excel</name>
 
   <properties>

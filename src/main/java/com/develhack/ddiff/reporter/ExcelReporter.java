@@ -112,7 +112,7 @@ public class ExcelReporter implements Reporter {
 
     String generateSheetName(XSSFWorkbook workbook, Diff diff) {
         List<LogicalPathElement> logicalPathElements = diff.getPath().logicalPathElements;
-        String fileName = logicalPathElements.get(logicalPathElements.size() - 1).toString();
+        String fileName = logicalPathElements.isEmpty() ? "Changes" : logicalPathElements.get(logicalPathElements.size() - 1).toString();
         String normalizeName = Normalizer.normalize(fileName, Normalizer.Form.NFKC).replaceAll("[\\[\\]\\\\/*?:]", "_");
         if (normalizeName.length() > MAX_SHEET_NAME_LENGTH) {
             normalizeName = normalizeName.substring(0, MAX_SHEET_NAME_LENGTH);
